@@ -9,7 +9,7 @@ export class AuthService {
 
   constructor() { }
 
-  authenticateUser(username:string,password:string)
+  authenticateUser(username:string,password:string):boolean
   {
     if(username=='ankita' && password=='ankita')
     {
@@ -18,5 +18,8 @@ export class AuthService {
     else{
       this.isValidUser=false;
     }
+
+    return this.isValidUser;
+
   }
 }

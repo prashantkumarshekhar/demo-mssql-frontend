@@ -25,9 +25,14 @@ export class LoginComponent implements OnInit {
    let username=this.loginForm.controls['username'].value;
    let password=this.loginForm.controls['password'].value;
 
-   this.authService.authenticateUser(username,password);
-
-   this.router.navigateByUrl('/book');
+   let response=this.authService.authenticateUser(username,password);
+    if(response)
+    {
+      this.router.navigateByUrl('/book');
+    }
+    else{
+      alert("Invalid username or password");
+    }
 
 
   //  if(isValidUser)
