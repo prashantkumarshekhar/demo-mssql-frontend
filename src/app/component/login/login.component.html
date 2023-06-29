@@ -1,0 +1,15 @@
+
+<div class='login-page'>
+  <div class="form">
+    <h4>Account Login</h4>
+<form [formGroup]="loginForm">
+
+    <input id="username" type="text" formControlName="username" placeholder="username">
+  
+    <input id="password" type="password" formControlName="password" placeholder="password">
+  
+    <button (click)="onLoginClick()">Login</button>
+    
+  </form>
+</div>
+</div>
