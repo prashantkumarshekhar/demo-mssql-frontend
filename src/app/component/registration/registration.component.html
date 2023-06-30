@@ -1,0 +1,18 @@
+<div class='login-page'>
+    <div class="form">
+      <!-- <img src="/assets/image/login.png" alt="Italian Trulli" style="width:50px;height:50px;margin-bottom:5px;"> -->
+      <h4>Sign Up</h4>
+  <form [formGroup]="registrationForm">
+  
+      <input id="username" type="text" formControlName="username" placeholder="username">
+
+      <input id="email" type="email" formControlName="email" placeholder="email">
+    
+      <input id="password" type="password" formControlName="password" placeholder="password">
+
+      <button (click)="onRegisterClick()">Register</button>
+      <p style="margin-top: 10px;">Already a member? <a href="/login">Login</a></p>
+      
+    </form>
+  </div>
+  </div>
