@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,8 @@ export class AuthService {
   isValidUser:Boolean=false;
 
   isValidUserUrl:string;
+
+  role:string="";
 
   constructor(private http : HttpClient) { 
 
@@ -31,7 +34,7 @@ export class AuthService {
       "password":password
     }
 
-    return this.http.get<Boolean>(this.isValidUserUrl,{params:params});
+    return this.http.get<User>(this.isValidUserUrl,{params:params});
     
 
   }

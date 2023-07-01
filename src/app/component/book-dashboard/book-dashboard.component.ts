@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Book } from 'src/app/model/book';
@@ -14,9 +15,13 @@ export class BookDashboardComponent implements OnInit {
   bookObj : Book = new Book();
   bookList : Book[] = [];
 
-  constructor(private formBuilder : FormBuilder, private bookService : BookService) { }
+  userrole:string="";
+
+  constructor(private formBuilder : FormBuilder, private bookService : BookService,private authService:AuthService) { }
 
   ngOnInit(): void {
+
+    this.userrole=this.authService.role;
 
     this.getAllBook();
 

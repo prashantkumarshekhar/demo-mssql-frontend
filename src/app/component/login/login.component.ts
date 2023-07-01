@@ -27,7 +27,17 @@ export class LoginComponent implements OnInit {
 
    this.authService.authenticateUser(username,password).subscribe(result=>{
 
-     this.authService.isValidUser=result;
+    //if user password is not matched with db then null is returned i.e invalid user
+    //else valid user
+    if(result==null)
+    {
+      this.authService.isValidUser=false;
+    }
+    else{
+      this.authService.isValidUser=true;
+      this.authService.role=result.role;
+    }
+     
 
      if(this.authService.isValidUser)
     {

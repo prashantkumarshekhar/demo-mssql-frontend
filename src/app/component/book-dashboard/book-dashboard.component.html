@@ -31,8 +31,9 @@
             <td>{{book.author}}</td>
             <td>{{book.price}}</td>
             <td>
-                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editBook" (click)="editBook(book)">Edit</button>
-                <button type="button" class="btn btn-outline-danger" (click)="deleteBook(book)">Delete</button>
+                <!--allow edit and delete option only if user has role admin-->
+                <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editBook" (click)="editBook(book)" [hidden]="userrole!='admin'">Edit</button>
+                <button type="button" class="btn btn-outline-danger" (click)="deleteBook(book)" [hidden]="userrole!='admin'">Delete</button>
             </td>
 
           </tr>
