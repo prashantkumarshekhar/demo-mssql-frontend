@@ -1,3 +1,4 @@
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { HomeComponent } from './component/home/home.component';
 import { AuthGuard } from './auth/auth.guard';
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'emp', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path:'register',component:RegistrationComponent},
-  { path:'',component:HomeComponent}
+  // { path:'',component:HomeComponent},
+  { path:'',component:SidebarComponent}
 ];  
 
 @NgModule({
