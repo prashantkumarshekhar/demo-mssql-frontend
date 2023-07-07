@@ -12,6 +12,8 @@ import { HomeComponent } from './component/home/home.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UimenuComponent } from './datamanagement/uimenu/uimenu.component';
+import { HeaderComponent } from './component/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     HomeComponent,
     RegistrationComponent,
-    SidebarComponent
+    SidebarComponent,
+    UimenuComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

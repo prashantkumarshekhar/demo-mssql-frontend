@@ -1,0 +1,26 @@
+<div class='menu-page'>
+    <div class="form">
+      <!-- <img src="/assets/image/login.png" alt="Italian Trulli" style="width:50px;height:50px;margin-bottom:5px;"> -->
+      <h4>Menu Management</h4>
+  <form [formGroup]="menuForm">
+  
+      <input id="name" type="text" formControlName="name" placeholder="menu name">
+      
+      <input id="icon" type="text" formControlName="icon" placeholder="icon">
+    
+      <input id="url" type="text" formControlName="url" placeholder="url">
+
+      <input id="permittedRoles" type="text" formControlName="permittedRoles" placeholder="permitted roles">
+
+      <input id="parentMenu" type="text" formControlName="parentMenu" placeholder="parent menu">
+    
+      <input id="orderNo" type="number" formControlName="orderNo" placeholder="order no">
+
+      Active
+      <input type="checkbox" formControlName="active" placeholder="active">
+
+      <button (click)="onAddClick()">Add Menu</button>
+      
+    </form>
+  </div>
+  </div>

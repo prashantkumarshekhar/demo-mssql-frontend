@@ -1,3 +1,4 @@
+import { UimenuComponent } from './datamanagement/uimenu/uimenu.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { HomeComponent } from './component/home/home.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path:'register',component:RegistrationComponent},
   // { path:'',component:HomeComponent},
-  { path:'',component:SidebarComponent}
+  { path:'sidebar',component:SidebarComponent},
+  { path:'menu',component:UimenuComponent}
 ];  
 
 @NgModule({

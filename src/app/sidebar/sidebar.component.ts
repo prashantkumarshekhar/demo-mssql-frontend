@@ -57,7 +57,7 @@ export class SidebarComponent implements OnInit {
             id: 5,
             name: "Submenu 3",
             icon: "abc",
-            url: "/abc",
+            url: "/login",
             permittedRoles: "admin",
             submenu: [],
             active: true,
@@ -67,7 +67,7 @@ export class SidebarComponent implements OnInit {
             id: 6,
             name: "Submenu 4",
             icon: "abc",
-            url: "/abc",
+            url: "/menu",
             permittedRoles: "admin",
             submenu: [],
             active: true,
@@ -77,7 +77,8 @@ export class SidebarComponent implements OnInit {
         active: true,
         orderNo: 1
       }
-    ]
+    ];
+
   }
 
   ngOnInit(): void {
@@ -85,7 +86,6 @@ export class SidebarComponent implements OnInit {
     this.myScriptElement = document.createElement("script");
     this.myScriptElement.src = "assets/js/main.js";
     document.body.appendChild(this.myScriptElement);
-
 
   }
 
